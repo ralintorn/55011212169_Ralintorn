@@ -13,7 +13,7 @@ var firstItem = shoppingList[1]
 shoppingList[0] = "Six eggs"
 //เปลี่ยนข้อมูล
 
-// เปลี่ยน var เป็น let จะไม่สามารถเปลี่ยนแปลงค่าได้
+// เปลี่ยน var เป็น let จะไม่สามารถเปลี่ยนแปลงค่าได้ จะเกิดการ Eroor
 
 //นับจำนวณข้อมูลในarray
 let possibleTipsInferred = [0.5, 0.18, 0.20]
