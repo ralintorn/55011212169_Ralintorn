@@ -21,7 +21,7 @@ let possibleTipExlicit:[Double] = [0.5, 0.18, 0.20]
 var numberOhItem = possibleTipsInferred.count
 
 possibleTipsInferred.isEmpty
-//ถ้าไม่มีข้อมูลฝน array จะเป็นค่า false
+//ถ้าไม่มีข้อมูลเป็น false
 
 //เพิ่มค่าใน array
 shoppingList.insert("pizza", atIndex: 0)
