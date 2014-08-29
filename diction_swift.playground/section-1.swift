@@ -13,6 +13,8 @@ println("The airports dictionary contains\(airports.count) item")
 
 //---add values---//
 airports["LHR"] = "London"
+airports["BKK"] = "Bangkok"
+airports
 
 //---update values---//
 airports["LHR"] = "London Heathrow"
@@ -26,7 +28,9 @@ airports
 //---remove---//
 airports["APL"] = "Apple International"
 
+airports
 airports["APL"] = nil
+
 
 if let removedValue = airports.removeValueForKey("DUB"){
     println("The removed airport's name is \(removedValue).")
