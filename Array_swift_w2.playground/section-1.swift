@@ -40,3 +40,23 @@ shoppingList
 
 shoppingList.removeLast()
 
+
+var Arrayint = [Int]()
+Arrayint = [55011212169,55011212070]
+var ArrayFname = [String]()
+ArrayFname = ["Ralintorn","Thanachoat"]
+var newID = Arrayint[0]+2
+
+Arrayint.append(55011212157)
+Arrayint += [55011212150,55011212122]
+
+Arrayint[2...4] = [0,1]
+Arrayint
+
+
+
+
+
+
+
+
