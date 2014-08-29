@@ -1,6 +1,6 @@
 let array: Array<Int> = [1,2,3,4]
 let dictionary: Dictionary<String,Int> = ["dog":1, "elephant":2]
-var airports: [String :String] = ["TYO": "TYO","DUB":"Dublin"]
+var airports: [String :String] = ["TYO": "TYO","DUB":"Dublin","BKK":"Bangkok","LAL":"Los Angeles Airline"]
 
 //------ตรวจสอบว่าว่างหรือไม่-------//
 if airports.isEmpty{
