@@ -37,8 +37,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="199" y="82" width="178" height="30"/>
+                                    <rect key="frame" x="193" y="82" width="178" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="calculateTapped:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="9aq-xz-6qz"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill Total (Post-Tax)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6h-5a-Atb">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -58,12 +61,6 @@
                                     <rect key="frame" x="23" y="126" width="168" height="21"/>
                                 </variation>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1hv-yT-2oZ">
-                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="197" y="126" width="182" height="31"/>
-                                </variation>
-                            </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyT-DY-img">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Calculator">
@@ -73,7 +70,7 @@
                                     <rect key="frame" x="177" y="176" width="70" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="Cbutton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6K3-JM-eek"/>
+                                    <action selector="calculateTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="51Z-x9-eoG"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="5WL-gN-S9d">
@@ -87,16 +84,26 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="8XW-dQ-E1E"/>
                                 </connections>
                             </tableView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="1hv-yT-2oZ">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="191" y="126" width="182" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="taxChangePercentage:" destination="vXZ-lx-hvc" eventType="valueChanged" id="fFZ-Md-4RL"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.95849198438861849" green="1" blue="0.84705607377802483" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Nhc-V1-qVv"/>
                                 <exclude reference="q6h-5a-Atb"/>
                                 <exclude reference="edv-hi-4H1"/>
-                                <exclude reference="1hv-yT-2oZ"/>
                                 <exclude reference="PyT-DY-img"/>
                                 <exclude reference="5WL-gN-S9d"/>
+                                <exclude reference="1hv-yT-2oZ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -104,13 +111,18 @@
                                 <include reference="Nhc-V1-qVv"/>
                                 <include reference="q6h-5a-Atb"/>
                                 <include reference="edv-hi-4H1"/>
-                                <include reference="1hv-yT-2oZ"/>
                                 <include reference="PyT-DY-img"/>
                                 <include reference="5WL-gN-S9d"/>
+                                <include reference="1hv-yT-2oZ"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="57p-Fc-LQi" appends="YES" id="bdm-Oa-6GG"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Jsf-xV-bHQ"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="5WL-gN-S9d" id="jso-rE-xGH"/>
                         <outlet property="taxPctLabel" destination="edv-hi-4H1" id="QYu-1n-Ubr"/>
@@ -119,8 +131,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="57p-Fc-LQi">
+                    <connections>
+                        <action selector="viewTapped:" destination="vXZ-lx-hvc" id="Lm6-yg-rdo"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-477" y="-39"/>
+            <point key="canvasLocation" x="-477.75" y="-39.5"/>
         </scene>
     </scenes>
 </document>

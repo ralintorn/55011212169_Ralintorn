@@ -22,13 +22,10 @@ class ViewController: UIViewController,UITableViewDelegate {
     
     @IBAction func calculateTapped(sender: AnyObject) {
         tipCalc.total = Double((totalTaxField.text as NSString).doubleValue)
-        let possibleTips = tipCalc.returnPossibleTips()
-        var results = ""
-        
-        for (tipPct, tipValue) in possibleTips{
-            results += "\(tipPct)%: \(tipValue)\n"
-        }
-        resultTextView.text = results
+        possibleTips = tipCalc.returnPossibleTips()
+        sortedKeys = sorted(Array(possibleTips.keys))
+         tableView.reloadData()
+
     }
     
     @IBAction func taxChangePercentage(sender: AnyObject) {
@@ -53,8 +50,6 @@ class ViewController: UIViewController,UITableViewDelegate {
         //3
         taxPctLabel.text = "Tax Percentage (\(Int(taxPctSlider.value))%)"
         //4
-        //resultTextView.text = ""
-        
     }
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int)->Int{
         return sortedKeys.count
