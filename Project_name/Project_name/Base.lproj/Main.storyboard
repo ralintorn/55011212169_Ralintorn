@@ -25,13 +25,14 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3c-1a-Nq4">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Ok">
+                                <state key="normal" title="Add">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="93" y="93" width="30" height="30"/>
                                 </variation>
                                 <connections>
+                                    <action selector="add:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="A3B-bO-KDZ"/>
                                     <action selector="okbutton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hFT-We-XD4"/>
                                 </connections>
                             </button>
@@ -52,6 +53,7 @@
                                     <rect key="frame" x="268" y="93" width="37" height="30"/>
                                 </variation>
                                 <connections>
+                                    <action selector="clear:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="anj-dn-fMk"/>
                                     <action selector="clearbutton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Va9-it-zSc"/>
                                 </connections>
                             </button>
@@ -77,6 +79,8 @@
                     <connections>
                         <outlet property="ListName" destination="k05-ij-DoL" id="x56-wk-E2w"/>
                         <outlet property="inputName" destination="JxQ-Ls-Cdj" id="FGu-gW-MEG"/>
+                        <outlet property="tableView" destination="k05-ij-DoL" id="kqc-rc-ReB"/>
+                        <outlet property="textfield" destination="JxQ-Ls-Cdj" id="iT0-eZ-d6v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

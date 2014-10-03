@@ -10,15 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var ListName: UITableView!
-    @IBOutlet weak var inputName: UITextField!
+    @IBOutlet var textfield: UITextField!
+    @IBOutlet var tableView: UITableView!
     
-    var Liststudent = [student]()
+    @IBAction func add(sender: AnyObject) {
+    }
     
-    @IBAction func okbutton(sender: AnyObject) {}
-    @IBAction func clearbutton(sender: AnyObject) {}
+    @IBAction func clear(sender: AnyObject) {
+    }
     
-    override func viewDidLoad() {
+        override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
