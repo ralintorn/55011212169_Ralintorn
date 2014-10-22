@@ -7,13 +7,28 @@
 //
 
 import UIKit
-
+protocol ColorTwoViewControllerDelegate{
+//    func myVCDidFinish(controller:ColorTwoViewController,text:String)
+    func myVCDidFinish(controller:ColorTwoViewController,text:String)
+}
 class ColorTwoViewController: UIViewController {
     
+    var delegate:ColorTwoViewControllerDelegate? = nil
+    
     var ColorString = ""
+    var CR = [UIColor.redColor(),UIColor.greenColor(),UIColor.blueColor()]
+    
     @IBAction func ColorSelectionButton(sender: UIButton) {
-    }
+        ColorLabel.text = sender.titleLabel!.text!
+            ColorLabel.textColor = getRandomColor()
+            ColorLabel.backgroundColor = getRandomColor()
+            ColorLabel.font = UIFont.boldSystemFontOfSize(50)
+            }
     @IBAction func SaveColor(sender: UIBarButtonItem) {
+        if(delegate != nil){
+        delegate!.myVCDidFinish(self,text:ColorLabel!.text!)
+        
+        }
     }
     @IBOutlet var ColorLabel: UILabel!
     
@@ -21,6 +36,18 @@ class ColorTwoViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        ColorLabel.text = ColorString
+    }
+    func getRandomColor() -> UIColor{
+        
+        var randomRed:CGFloat = CGFloat(drand48())
+        
+        var randomGreen:CGFloat = CGFloat(drand48())
+        
+        var randomBlue:CGFloat = CGFloat(drand48())
+        
+        return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
+        
     }
 
     override func didReceiveMemoryWarning() {

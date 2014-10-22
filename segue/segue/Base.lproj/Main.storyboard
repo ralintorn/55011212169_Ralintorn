@@ -19,8 +19,8 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTk-e7-Ipf">
                                 <rect key="frame" x="0.0" y="79" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="0KP-dJ-sRt">
-                                        <barButtonItem key="leftBarButtonItem" title="Save" id="YDQ-6y-uhM">
+                                    <navigationItem id="0KP-dJ-sRt">
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="YDQ-6y-uhM">
                                             <connections>
                                                 <action selector="SaveColor:" destination="Mnl-R3-Btm" id="4Pr-Te-yrA"/>
                                             </connections>
@@ -28,37 +28,19 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9F-rE-t1o">
-                                <rect key="frame" x="166" y="227" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9F-rE-t1o">
+                                <rect key="frame" x="0.0" y="123" width="375" height="188"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPQ-fj-DEc">
-                                <rect key="frame" x="164" y="319" width="42" height="30"/>
-                                <state key="normal" title="Green">
+                                <rect key="frame" x="168" y="535" width="38" height="30"/>
+                                <state key="normal" title="Color">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="ColorSelectionButton:" destination="Mnl-R3-Btm" eventType="touchUpInside" id="Vb5-hl-5h3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0N-2C-njx">
-                                <rect key="frame" x="295" y="319" width="31" height="30"/>
-                                <state key="normal" title="Blue">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="ColorSelectionButton:" destination="Mnl-R3-Btm" eventType="touchUpInside" id="sDx-cb-VdL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNX-Co-5bf">
-                                <rect key="frame" x="36" y="319" width="30" height="30"/>
-                                <state key="normal" title="Red">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="ColorSelectionButton:" destination="Mnl-R3-Btm" eventType="touchUpInside" id="V9T-oH-doA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -88,7 +70,7 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="QSy-ZB-cdH">
-                                        <barButtonItem key="leftBarButtonItem" title="Color" id="Dus-fB-3mq">
+                                        <barButtonItem key="rightBarButtonItem" title="Color" id="Dus-fB-3mq">
                                             <connections>
                                                 <segue destination="Mnl-R3-Btm" kind="show" identifier="mysegue" id="KCK-IH-Ntx"/>
                                             </connections>
