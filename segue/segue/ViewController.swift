@@ -9,22 +9,31 @@
 import UIKit
 
 class ViewController: UIViewController,ColorTwoViewControllerDelegate {
-
+    
     @IBOutlet var ColorLabel: UILabel!
+    
+    @IBOutlet var IDlbel: UILabel!
+    @IBOutlet var Namelbel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        Namelbel.text = ""
+        IDlbel.text = ""
     }
-    func myVCDidFinish(controller: ColorTwoViewController, text: String){
-    ColorLabel.text = "Co: "+text
-    controller.navigationController?.popToRootViewControllerAnimated(true)
+    func myVCDidFinish(controller: ColorTwoViewController, text: String,procol:UIColor,name: String,id: String){
+        ColorLabel.text = ""
+        ColorLabel.backgroundColor = procol
+        Namelbel.text = "Name : " + name
+        IDlbel.text = "ID : " + id
+        
+        controller.navigationController?.popToRootViewControllerAnimated(true)
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if segue.identifier == "mySegue"{
-        let vc = segue.destinationViewController as ColorTwoViewController
+        if segue.identifier == "mysegue"{
+            let vc = segue.destinationViewController as ColorTwoViewController
             vc.ColorString = ColorLabel.text!
             vc.delegate = self
         }
     }
 }
-

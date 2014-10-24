@@ -81,8 +81,8 @@
 			children = (
 				3FC2CFF619F0F8AC006D8CFE /* ColorTwoViewController.swift */,
 				3FC2CFD219F0F105006D8CFE /* AppDelegate.swift */,
-				3FC2CFD419F0F105006D8CFE /* ViewController.swift */,
 				3FC2CFD619F0F105006D8CFE /* Main.storyboard */,
+				3FC2CFD419F0F105006D8CFE /* ViewController.swift */,
 				3FC2CFD919F0F105006D8CFE /* Images.xcassets */,
 				3FC2CFDB19F0F105006D8CFE /* LaunchScreen.xib */,
 				3FC2CFD019F0F105006D8CFE /* Supporting Files */,
@@ -411,6 +411,7 @@
 				3FC2CFEE19F0F105006D8CFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FC2CFEF19F0F105006D8CFE /* Build configuration list for PBXNativeTarget "segueTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +420,7 @@
 				3FC2CFF119F0F105006D8CFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
