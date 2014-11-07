@@ -45,6 +45,9 @@ class ViewController: UIViewController , UICollisionBehaviorDelegate {
             let itemBehaviour = UIDynamicItemBehavior(items: [self.square])
             itemBehaviour.elasticity = 0.6
             self.animator.addBehavior(itemBehaviour)
+            
+            self.panGesture = UIPanGestureRecognizer(target: self, action: "panning:")
+            self.square!.addGestureRecognizer(self.panGesture)
         }
     }
     
@@ -56,21 +59,21 @@ class ViewController: UIViewController , UICollisionBehaviorDelegate {
         UIView.animateWithDuration(0) {
         collidingView.backgroundColor = UIColor.purpleColor()
         }
-            var firstContact = false
-            
-            if (!firstContact) {
-                firstContact = true
-                
-                let square = UIView(frame: CGRect(x: 30, y: 0, width: 30, height: 20))
-                square.backgroundColor = UIColor.grayColor()
-                view.addSubview(square)
-                
-                collision.addItem(square)
-                gravity.addItem(square)
-                
-                let attach = UIAttachmentBehavior(item: collidingView, attachedToItem:square)
-                animator.addBehavior(attach)
-            }
+//            var firstContact = false
+//            
+//            if (!firstContact) {
+//                firstContact = true
+//                
+//                let square = UIView(frame: CGRect(x: 30, y: 0, width: 30, height: 20))
+//                square.backgroundColor = UIColor.grayColor()
+//                view.addSubview(square)
+//                
+//                collision.addItem(square)
+//                gravity.addItem(square)
+//                
+//                let attach = UIAttachmentBehavior(item: collidingView, attachedToItem:square)
+//                animator.addBehavior(attach)
+//            }
         }
     
     override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
@@ -83,12 +86,24 @@ class ViewController: UIViewController , UICollisionBehaviorDelegate {
         animator.addBehavior(snap)
     }
     
+    func panning(pan: UIPanGestureRecognizer){
+        println("Our box is panning...")
+        var location = pan.locationInView(self.view)
+        var touchLocation = pan.locationInView(self.square)
+        if pan.state == UIGestureRecognizerState.Began{
+        self.animator!.removeAllBehaviors()
+            self.square!.center = location;
+        }else if pan.state == UIGestureRecognizerState.Changed{
+            self.square!.center = location;
+        }else if pan.state == UIGestureRecognizerState.Ended{
+            self.animator!.addBehavior(self.gravity)
+            self.animator!.addBehavior(self.collision)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
