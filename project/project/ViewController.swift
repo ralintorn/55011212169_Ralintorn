@@ -15,7 +15,7 @@ class ViewController: UIViewController , UICollisionBehaviorDelegate {
     var gravity: UIGravityBehavior!
     var collision: UICollisionBehavior!
     var snap: UISnapBehavior!
-    
+    var panGesture: UIPanGestureRecognizer!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,21 +56,21 @@ class ViewController: UIViewController , UICollisionBehaviorDelegate {
         UIView.animateWithDuration(0) {
         collidingView.backgroundColor = UIColor.purpleColor()
         }
-//            var firstContact = false
-//            
-//            if (!firstContact) {
-//                firstContact = true
-//                
-//                let square = UIView(frame: CGRect(x: 30, y: 0, width: 30, height: 20))
-//                square.backgroundColor = UIColor.grayColor()
-//                view.addSubview(square)
-//                
-//                collision.addItem(square)
-//                gravity.addItem(square)
-//                
-//                let attach = UIAttachmentBehavior(item: collidingView, attachedToItem:square)
-//                animator.addBehavior(attach)
-//            }
+            var firstContact = false
+            
+            if (!firstContact) {
+                firstContact = true
+                
+                let square = UIView(frame: CGRect(x: 30, y: 0, width: 30, height: 20))
+                square.backgroundColor = UIColor.grayColor()
+                view.addSubview(square)
+                
+                collision.addItem(square)
+                gravity.addItem(square)
+                
+                let attach = UIAttachmentBehavior(item: collidingView, attachedToItem:square)
+                animator.addBehavior(attach)
+            }
         }
     
     override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
