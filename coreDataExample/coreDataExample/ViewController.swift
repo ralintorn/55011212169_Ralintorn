@@ -14,7 +14,6 @@ class ViewController: UIViewController , UITableViewDataSource {
     //var items = [String]()
     var items = [NSManagedObject]()
     @IBOutlet weak var tableView: UITableView!
-    
     @IBAction func addItem(sender: AnyObject) {
         var alert = UIAlertController(title: "New Item",message: "Add a new item",preferredStyle: .Alert)
         
