@@ -22,7 +22,7 @@ class ViewController: UIViewController {
 //    //let yPosition : CGFloat = 120
 //    let size : CGFloat = CGFloat( Int(rand()) %  40 + 20.0)
 //    let yPosition : CGFloat = CGFloat( Int(rand()) %  200 + 20.0)
-
+ @IBOutlet weak var numberOfFishSlider: UISlider!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -78,7 +78,8 @@ class ViewController: UIViewController {
 //                coloredSquare.removeFromSuperview()
 //                
 //        })   
-        for loopNumber in 0...10 {
+        let numberOfFish = Int(self.numberOfFishSlider.value)
+        for loopNumber in 1...10 {
             
             // set up some constants for the animation
             let duration : NSTimeInterval = 1.0
@@ -91,7 +92,7 @@ class ViewController: UIViewController {
             
             // create the fish and add it to the screen
             let fish = UIImageView()
-            fish.image = UIImage(named: "blue-fish.png")
+            fish.image = UIImage(named: "elephant.png")
             fish.frame = CGRectMake(0, yPosition, size, size)
             self.view.addSubview(fish)
             

@@ -15,6 +15,8 @@
 		3F1C4C501A0CBA3B00203863 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1C4C4E1A0CBA3B00203863 /* LaunchScreen.xib */; };
 		3F1C4C5C1A0CBA3B00203863 /* lab1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1C4C5B1A0CBA3B00203863 /* lab1Tests.swift */; };
 		3F9B6D291A0CC9FB00416EF0 /* blue-fish.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9B6D281A0CC9FB00416EF0 /* blue-fish.png */; };
+		3F9B6D2B1A0CCDDD00416EF0 /* pooh.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9B6D2A1A0CCDDD00416EF0 /* pooh.png */; };
+		3F9B6D2D1A0CCE7300416EF0 /* elephant.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9B6D2C1A0CCE7300416EF0 /* elephant.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		3F1C4C5A1A0CBA3B00203863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F1C4C5B1A0CBA3B00203863 /* lab1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lab1Tests.swift; sourceTree = "<group>"; };
 		3F9B6D281A0CC9FB00416EF0 /* blue-fish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-fish.png"; sourceTree = "<group>"; };
+		3F9B6D2A1A0CCDDD00416EF0 /* pooh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pooh.png; sourceTree = "<group>"; };
+		3F9B6D2C1A0CCE7300416EF0 /* elephant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elephant.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 		3F1C4C401A0CBA3B00203863 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3F9B6D2C1A0CCE7300416EF0 /* elephant.png */,
+				3F9B6D2A1A0CCDDD00416EF0 /* pooh.png */,
 				3F9B6D281A0CC9FB00416EF0 /* blue-fish.png */,
 				3F1C4C411A0CBA3B00203863 /* Info.plist */,
 			);
@@ -198,7 +204,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F9B6D2D1A0CCE7300416EF0 /* elephant.png in Resources */,
 				3F1C4C4B1A0CBA3B00203863 /* Main.storyboard in Resources */,
+				3F9B6D2B1A0CCDDD00416EF0 /* pooh.png in Resources */,
 				3F1C4C501A0CBA3B00203863 /* LaunchScreen.xib in Resources */,
 				3F1C4C4D1A0CBA3B00203863 /* Images.xcassets in Resources */,
 				3F9B6D291A0CC9FB00416EF0 /* blue-fish.png in Resources */,
