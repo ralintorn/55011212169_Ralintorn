@@ -2,8 +2,8 @@
 //  Exam1_55011212169Tests.swift
 //  Exam1_55011212169Tests
 //
-//  Created by student on 10/10/14.
-//  Copyright (c) 2014 Arthur Knopper. All rights reserved.
+//  Created by student on 12/17/14.
+//  Copyright (c) 2014 student. All rights reserved.
 //
 
 import UIKit

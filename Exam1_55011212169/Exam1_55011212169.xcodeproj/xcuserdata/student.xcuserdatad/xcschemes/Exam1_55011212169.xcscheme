@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3F58F95319E7B16800C209F0"
+               BlueprintIdentifier = "3F4CEAAF1A4125AD00B30521"
                BuildableName = "Exam1_55011212169.app"
                BlueprintName = "Exam1_55011212169"
                ReferencedContainer = "container:Exam1_55011212169.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3F58F96819E7B16800C209F0"
+               BlueprintIdentifier = "3F4CEAC71A4125AE00B30521"
                BuildableName = "Exam1_55011212169Tests.xctest"
                BlueprintName = "Exam1_55011212169Tests"
                ReferencedContainer = "container:Exam1_55011212169.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3F58F96819E7B16800C209F0"
+               BlueprintIdentifier = "3F4CEAC71A4125AE00B30521"
                BuildableName = "Exam1_55011212169Tests.xctest"
                BlueprintName = "Exam1_55011212169Tests"
                ReferencedContainer = "container:Exam1_55011212169.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3F58F95319E7B16800C209F0"
+            BlueprintIdentifier = "3F4CEAAF1A4125AD00B30521"
             BuildableName = "Exam1_55011212169.app"
             BlueprintName = "Exam1_55011212169"
             ReferencedContainer = "container:Exam1_55011212169.xcodeproj">
@@ -75,7 +75,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3F58F95319E7B16800C209F0"
+            BlueprintIdentifier = "3F4CEAAF1A4125AD00B30521"
             BuildableName = "Exam1_55011212169.app"
             BlueprintName = "Exam1_55011212169"
             ReferencedContainer = "container:Exam1_55011212169.xcodeproj">
@@ -93,7 +93,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3F58F95319E7B16800C209F0"
+            BlueprintIdentifier = "3F4CEAAF1A4125AD00B30521"
             BuildableName = "Exam1_55011212169.app"
             BlueprintName = "Exam1_55011212169"
             ReferencedContainer = "container:Exam1_55011212169.xcodeproj">
